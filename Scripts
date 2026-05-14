@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Master - By ASIM</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: white; text-align: center; padding: 20px; }
+        .container { background: #1e293b; padding: 30px; border-radius: 15px; max-width: 500px; margin: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        input { width: 90%; padding: 12px; border-radius: 8px; border: none; margin-bottom: 15px; }
+        button { background: #3b82f6; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #2563eb; }
+        #output { margin-top: 20px; text-align: left; background: #334155; padding: 15px; border-radius: 10px; display: none; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 AI Script Pro</h1>
+        <p>Apna topic likhen aur script hasil karen!</p>
+        <input type="text" id="topic" placeholder="Topic yahan likhen...">
+        <br>
+        <button onclick="generateScript()">Script Banayein</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function generateScript() {
+            let topic = document.getElementById('topic').value;
+            let output = document.getElementById('output');
+            
+            if(topic == "") { alert("Pehle kuch likhen!"); return; }
+
+            output.style.display = "block";
+            output.innerHTML = "<b>✨ Script for: " + topic + "</b>\n\n" +
+            "<b>1. Hook:</b> Kya aap ne kabhi socha hai ke " + topic + " kaise kaam karta hai?\n\n" +
+            "<b>2. Scene 1 Prompt:</b> A cinematic shot of " + topic + ", high quality, 8K, HDR lighting.\n\n" +
+            "<b>3. Script:</b> Aaj hum baat karenge " + topic + " ke baare mein. Ye aaj kal ka sab se viral topic hai...\n\n" +
+            "<b>4. Hashtags:</b> #AI #" + topic.replace(/\s/g, '') + " #Viral #2026";
+        }
+    </script>
+</body>
+</html>
